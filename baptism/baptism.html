@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baptism Certificate - St. Joseph's Cathedral</title>
+    <link rel="stylesheet" href="baptism-style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="certificate-form">
+            <h2>BAPTISM CERTIFICATE</h2>
+            <h3>बपतिस्मा प्रमाण पत्र</h3>
+            <hr>
+            <h3>ST. JOSEPH'S CATHEDRAL</h3>
+            <h4>सेंट जोसेफ कैथेड्रल</h4>
+            <h4>DIOCESE OF MEERUT</h4>
+            <h4>मेरठ धर्मप्रांत</h4>
+            <hr>
+
+            <form id="baptismForm">
+                <input type="hidden" id="recordId">
+                
+                <div class="form-row">
+                    <label>Serial No. / क्रमांक:</label>
+                    <input type="text" id="serial" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Year / वर्ष:</label>
+                    <input type="text" id="year" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Date of Baptism / बपतिस्मा की तिथि:</label>
+                    <input type="date" id="baptismDate" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Date of Birth / जन्म तिथि:</label>
+                    <input type="date" id="birthDate" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Place of Birth / जन्म स्थान:</label>
+                    <input type="text" id="birthPlace" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Name / नाम:</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Sex / लिंग:</label>
+                    <select id="sex" required>
+                        <option value="">Select</option>
+                        <option value="Male">Male / पुरुष</option>
+                        <option value="Female">Female / महिला</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label>Father's Name / पिता का नाम:</label>
+                    <input type="text" id="fatherName" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Mother's Name / माता का नाम:</label>
+                    <input type="text" id="motherName" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Father's Domicile / पिता का निवास:</label>
+                    <input type="text" id="domicile" required>
+                </div>
+
+                <div class="form-row">
+                    <label>His Profession / उनका व्यवसाय:</label>
+                    <input type="text" id="profession" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Godfather's Name / गॉडफादर का नाम:</label>
+                    <input type="text" id="godfatherName" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Godmother's Name / गॉडमदर का नाम:</label>
+                    <input type="text" id="godmotherName" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Minister's Name / मंत्री का नाम:</label>
+                    <input type="text" id="ministerName" required>
+                </div>
+
+                <hr>
+
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Save / Update Form</button>
+                    <button type="button" class="btn btn-secondary" onclick="resetForm()">Reset / रीसेट</button>
+                </div>
+            </form>
+
+            <div class="footer">
+                <div>
+                    <strong>Parochial Seal</strong><br>
+                    <span>पेरोकियल सील</span>
+                </div>
+                <div>
+                    <strong>Date / दिनांक</strong>
+                </div>
+                <div>
+                    <strong>Father-in-charge</strong><br>
+                    <span>प्रभारी फादर</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <div id="searchSection">
+            <h3>Search Baptism Certificate / बपतिस्मा प्रमाण पत्र खोजें</h3>
+            <div class="search-row">
+                <label>Search by Name / नाम से खोजें:</label>
+                <input type="text" id="searchName" placeholder="Enter name">
+            </div>
+            <div class="search-row">
+                <label>Or by Serial No. / या क्रमांक:</label>
+                <input type="text" id="searchSerial" placeholder="Enter serial number">
+            </div>
+            <button class="btn btn-primary" onclick="searchRecords()">Search / खोजें</button>
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <script src="baptism-script.js"></script>
+</body>
+</html>
