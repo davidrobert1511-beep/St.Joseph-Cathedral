@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Certificate - St. Joseph's Cathedral</title>
+    <link rel="stylesheet" href="marriage-style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="certificate-form">
+            <h2>MARRIAGE CERTIFICATE</h2>
+            <h3>विवाह प्रमाण पत्र</h3>
+            <hr>
+            <h3>ST. JOSEPH'S CATHEDRAL</h3>
+            <h4>सेंट जोसेफ कैथेड्रल</h4>
+            <h4>DIOCESE OF MEERUT</h4>
+            <h4>मेरठ धर्मप्रांत</h4>
+            <hr>
+
+            <form id="marriageForm">
+                <input type="hidden" id="recordId">
+                
+                <div class="form-row">
+                    <label>Serial No. / क्रमांक:</label>
+                    <input type="text" id="serial" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Year / वर्ष:</label>
+                    <input type="text" id="year" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Date of Marriage / विवाह की तिथि:</label>
+                    <input type="date" id="marriageDate" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Place of Marriage / विवाह का स्थान:</label>
+                    <input type="text" id="marriagePlace" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Bridegroom's Name / वर का नाम:</label>
+                    <input type="text" id="groomName" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Bridegroom's Father's Name / वर के पिता का नाम:</label>
+                    <input type="text" id="groomFatherName" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Bride's Name / वधू का नाम:</label>
+                    <input type="text" id="brideName" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Bride's Father's Name / वधू के पिता का नाम:</label>
+                    <input type="text" id="brideFatherName" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Witness 1 / गवाह 1:</label>
+                    <input type="text" id="witness1" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Witness 2 / गवाह 2:</label>
+                    <input type="text" id="witness2" required>
+                </div>
+
+                <hr>
+
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Save / Update Form</button>
+                    <button type="button" class="btn btn-secondary" onclick="resetForm()">Reset / रीसेट</button>
+                </div>
+            </form>
+
+            <div class="footer">
+                <div>
+                    <strong>Parochial Seal</strong><br>
+                    <span>पेरोकियल सील</span>
+                </div>
+                <div>
+                    <strong>Date / दिनांक</strong>
+                </div>
+                <div>
+                    <strong>Father-in-charge</strong><br>
+                    <span>प्रभारी फादर</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <div id="searchSection">
+            <h3>Search Marriage Certificate / विवाह प्रमाण पत्र खोजें</h3>
+            <div class="search-row">
+                <label>Search by Groom or Bride Name / नाम से खोजें:</label>
+                <input type="text" id="searchName" placeholder="Enter name">
+            </div>
+            <div class="search-row">
+                <label>Or by Serial No. / या क्रमांक:</label>
+                <input type="text" id="searchSerial" placeholder="Enter serial number">
+            </div>
+            <button class="btn btn-primary" onclick="searchRecords()">Search / खोजें</button>
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <script src="marriage-script.js"></script>
+</body>
+</html>

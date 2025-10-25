@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Death Certificate - St. Joseph's Cathedral</title>
+    <link rel="stylesheet" href="death-style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="certificate-form">
+            <h2>DEATH CERTIFICATE</h2>
+            <h3>मृत्यु प्रमाण पत्र</h3>
+            <hr>
+            <h3>ST. JOSEPH'S CATHEDRAL</h3>
+            <h4>सेंट जोसेफ कैथेड्रल</h4>
+            <h4>DIOCESE OF MEERUT</h4>
+            <h4>मेरठ धर्मप्रांत</h4>
+            <hr>
+
+            <form id="deathForm">
+                <input type="hidden" id="recordId">
+                
+                <div class="form-row">
+                    <label>Serial No. / क्रमांक:</label>
+                    <input type="text" id="serial" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Year / वर्ष:</label>
+                    <input type="text" id="year" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Date of Death / मृत्यु की तिथि:</label>
+                    <input type="date" id="deathDate" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Name of Deceased / मृतक का नाम:</label>
+                    <input type="text" id="deceasedName" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Sex / लिंग:</label>
+                    <select id="sex" required>
+                        <option value="">Select</option>
+                        <option value="Male">Male / पुरुष</option>
+                        <option value="Female">Female / महिला</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label>Father's Name / पिता का नाम:</label>
+                    <input type="text" id="fatherName" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Mother's Name / माता का नाम:</label>
+                    <input type="text" id="motherName" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Spouse's Name / पति/पत्नी का नाम:</label>
+                    <input type="text" id="spouseName">
+                </div>
+
+                <div class="form-row">
+                    <label>Address / पता:</label>
+                    <input type="text" id="address" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Cause of Death / मृत्यु का कारण:</label>
+                    <input type="text" id="causeOfDeath" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Age at Death / मृत्यु के समय आयु:</label>
+                    <input type="text" id="ageAtDeath" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Minister's Name / मंत्री का नाम:</label>
+                    <input type="text" id="ministerName" required>
+                </div>
+
+                <hr>
+
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Save / Update Form</button>
+                    <button type="button" class="btn btn-secondary" onclick="resetForm()">Reset / रीसेट</button>
+                </div>
+            </form>
+
+            <div class="footer">
+                <div>
+                    <strong>Parochial Seal</strong><br>
+                    <span>पेरोकियल सील</span>
+                </div>
+                <div>
+                    <strong>Date / दिनांक</strong>
+                </div>
+                <div>
+                    <strong>Father-in-charge</strong><br>
+                    <span>प्रभारी फादर</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <div id="searchSection">
+            <h3>Search Death Certificate / मृत्यु प्रमाण पत्र खोजें</h3>
+            <div class="search-row">
+                <label>Search by Name / नाम से खोजें:</label>
+                <input type="text" id="searchName" placeholder="Enter name">
+            </div>
+            <div class="search-row">
+                <label>Or by Serial No. / या क्रमांक:</label>
+                <input type="text" id="searchSerial" placeholder="Enter serial number">
+            </div>
+            <button class="btn btn-primary" onclick="searchRecords()">Search / खोजें</button>
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <script src="death-script.js"></script>
+</body>
+</html>
